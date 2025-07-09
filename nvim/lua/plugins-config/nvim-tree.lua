@@ -4,7 +4,7 @@ if not status then
 	return
 end
 
-local keymap = require('keybindings').nvim-tree
+-- local keymap = require('keybindings').nvimTree
 
 -- 列表操作快捷键
 nvim_tree.setup({
@@ -34,10 +34,6 @@ nvim_tree.setup({
 		relativenumber = false,
 		-- 显示图标
 		signcolumn = "yes",
-        mapping = {
-            custom_only =  false,
-            list = keymap,
-        }
 	},
 	renderer = {
 		root_folder_label = false,

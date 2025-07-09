@@ -12,10 +12,15 @@ map("n", "<C-h>", "<C-w>h", opt)
 map("n", "<C-j>", "<C-w>j", opt)
 map("n", "<C-k>", "<C-w>k", opt)
 map("n", "<C-l>", "<C-w>l", opt)
+map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opt)
+-- 调整窗口大小
+
+vim.keymap.set('v', '<', '<gv', opts)
+vim.keymap.set('v', '>', '>gv', opts)
 
 -- nvim-tree
-local pluginKeyBinding = {}
+local pluginKeys = {}
 
-pluginKeyBinding.nvim-tree = {
+pluginKeys.nvimTree = {
 	{ key = "<F5>", action = "refresh" },
 }
