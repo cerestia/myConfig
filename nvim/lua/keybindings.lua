@@ -18,9 +18,18 @@ map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opt)
 vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
 
+-- 终端快捷键
+map("n", "<leader>th", "<cmd>ToggleTerm size=10 direction=horizontal name=desktop<cr>", opt)
+
 -- nvim-tree
 local pluginKeys = {}
 
 pluginKeys.nvimTree = {
 	{ key = "<F5>", action = "refresh" },
 }
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
