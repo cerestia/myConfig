@@ -10,3 +10,4 @@ vim.opt.clipboard = 'unnamedplus' -- 使用系统剪切板
 vim.opt.mouse = 'a' -- allow the mouse to be used in Nvim
 vim.opt.scroll = 1 --设置滚动行数为1
 vim.opt.mousescroll = 'ver:1'
+vim.opt.showtabline = 2 -- 始终显示顶部标签栏
